@@ -1,0 +1,27 @@
+.mainItem {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  @media screen and (max-width: 600px) {
+    margin-top: 60px;
+  }
+}
+
+.avatar {
+  transform: translate(100%);
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  transform: translateX(-100%);
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.avatarAni,
+.avatarAni img {
+  transform: translateX(0) scale(1.1);
+  transition: transform 1.2s;
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}

@@ -1,0 +1,48 @@
+@import "../../styles/colors.scss";
+
+.advCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  @media screen and (max-width: 768px) {
+    & {
+      width: 80%;
+    }
+  }
+}
+
+.advCard img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.advCardText {
+  color: $white;
+  font-family: MontReg, MontR, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 66.56px;
+  text-transform: capitalize;
+  @media screen and (max-width: 1024px) {
+    & {
+      font-size: 24px;
+      text-align: center;
+      line-height: 35px;
+    }
+  }
+}
+
+.img {
+  display: inline-block;
+  overflow: hidden; /* clip the excess when child gets bigger than parent */
+}
+.img img {
+  display: block;
+  transition: transform 0.6s; /* smoother zoom */
+}
+.img:hover img {
+  transform: scale(1.2);
+  transform-origin: 50% 50%;
+}

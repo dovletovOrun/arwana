@@ -1,0 +1,123 @@
+@import 'react-image-gallery/styles/css/image-gallery.css';
+
+@font-face {
+  font-family: "MontBold";
+  src: url("../public/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "MontReg";
+  src: url("../public/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "MontThin";
+  src: url("../public/fonts/Montserrat-Thin.ttf") format("truetype");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "MontB";
+  src: url("../public/fonts/Montserrat-Bold.woff") format("woff");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "MontR";
+  src: url("../public/fonts/Montserrat-Regular.woff") format("woff");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "MontT";
+  src: url("../public/fonts/Montserrat-Thin.woff") format("woff");
+  font-display: block;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  height: 100%;
+}
+
+.cursor {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: fixed;
+  border: 1px solid #d3cfbe;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #555555;
+  border-radius: 100px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+:where(.css-dev-only-do-not-override-zl9ks2).ant-collapse .ant-collapse-content{
+  background-color: transparent;
+}
+:where(.css-dev-only-do-not-override-zl9ks2).ant-collapse{
+  color: #fff;
+  font-size: 23px;
+}
+
+:where(.css-dev-only-do-not-override-zl9ks2).ant-collapse>.ant-collapse-item >.ant-collapse-header{
+  color: #fff;
+  font-weight: 300;
+  font-size: 23px;
+}
+:where(.css-dev-only-do-not-override-zl9ks2).ant-collapse>.ant-collapse-item >.ant-collapse-header .ant-collapse-arrow{
+  font-size: 23px;
+}
+
+:where(.css-dev-only-do-not-override-zl9ks2).ant-collapse>.ant-collapse-item >.ant-collapse-header .ant-collapse-expand-icon {
+  display: block;
+  
+}
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  max-height: calc(80vh - 140px);
+}
+

@@ -1,0 +1,41 @@
+@import "../../styles/colors.scss";
+@import "../../styles/commonStyles.scss";
+
+.sidebar {
+  height: 100%;
+  background-color: $sidebar;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 40px;
+  max-width: 30%;
+}
+
+.adminName {
+  color: $white;
+  font-size: 24px;
+  font-family: MontBold, sans-serif;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tab {
+  color: $white;
+  font-family: MontReg, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 187.5% */
+  letter-spacing: -0.32px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.activeTab {
+  color: $green;
+}

@@ -1,0 +1,126 @@
+@import "../../styles/colors.scss";
+@import "../../styles/commonStyles.scss";
+
+.gridSection {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 80px 0;
+  align-items: center;
+  @media screen and (max-width: 1024px) {
+    & {
+      padding: 0;
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.sectionText {
+  @include section-text;
+  text-align: center;
+}
+
+.productTabs {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.productTabs li {
+  color: $inactiveGray;
+  font-family: MontReg, MontR, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.productTabs li:hover {
+  opacity: 0.8;
+}
+
+.grid {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 30px;
+  align-content: center;
+  margin-top: 40px;
+  @media screen and (max-width: 1024px) {
+    & {
+      grid-template-columns: repeat(1, 1fr);
+      width: 90%;
+    }
+  }
+}
+
+.grid div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.grid img {
+  max-width: 90%;
+  object-fit: cover;
+  transition: filter 0.3s;
+  opacity: 1;
+  max-height: 180px;
+  border-radius: 3px;
+}
+
+.gridImg {
+  animation: 0.3s linear scaleUp;
+  transform: scale(1);
+}
+
+.overlayText {
+  position: absolute;
+  top: 75%;
+  // bottom: 8%;
+  // left: -24%;
+  opacity: 1;
+
+  transition: ease-in 0.3s;
+}
+
+.overlayText h1 {
+  font-size: 18px;
+  font-family: MontReg, MontR, sans-serif;
+  font-weight: 300;
+  background-color: #000000a6;
+  padding: 5px 10px;
+  color: $white;
+}
+
+.advantageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.advanTitle {
+  @include h2;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.advanP {
+  @include p;
+  text-align: center;
+  width: 50%;
+}
+
+// .gridItem:hover .overlayText {
+//   opacity: 1;
+// }
+
+// .gridItem:hover img {
+//   // filter: blur(5px);
+//   // -webkit-filter: blur(5px);
+// }

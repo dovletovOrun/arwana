@@ -1,0 +1,259 @@
+@import "../../styles/colors.scss";
+@import "../../styles/commonStyles.scss";
+
+$speed: 0.3s;
+
+@mixin h5 {
+  color: $white;
+  width: 100%;
+  font-family: MontThin, MontT, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 300;
+  white-space: nowrap;
+  @media screen and (max-width: 550px) {
+    & {
+      font-size: 24px;
+    }
+  }
+}
+
+.headerMenu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  animation: disappearToTop 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  transition: ease-out 0.3s;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.headerMenuActive {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $backgroundColor;
+  visibility: visible;
+  animation: appearFromTop 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  transition: ease-in 0.5s;
+  display: flex;
+}
+
+.swiper {
+  height: 100%;
+  width: 40%;
+  z-index: 10000;
+}
+
+.menuLinksContainer {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  @media screen and (max-width: 1024px) {
+  }
+}
+.mainMenuWrapper {
+  list-style: none;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 150px;
+  & li {
+    width: 50%;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1500px) {
+    & {
+      padding: 80px;
+      height: 60%;
+      li {
+        width: 60%;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    & {
+      padding: 80px;
+      height: 60%;
+      flex-direction: column;
+      li {
+        width: 60%;
+      }
+    }
+  }
+  @media screen and (max-width: 440px) {
+    & {
+      padding: 20px;
+    }
+  }
+}
+
+.mainLinksUp {
+  @include h5;
+  animation: slideFromUp 1.6s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  position: relative;
+  transition: all 0.6s ease;
+}
+
+.mainLinksDown {
+  visibility: hidden;
+  position: relative;
+
+  @include h5;
+}
+
+.subLinksUp {
+  visibility: hidden;
+  z-index: -1;
+}
+
+.subLinksDown {
+  @include h5;
+  animation: slideFromUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  position: relative;
+  transition: all 0.6s ease;
+}
+
+.subMenu {
+  width: 100%;
+  margin-top: 10vh;
+  .subMenuWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+.overflow {
+  position: relative;
+  overflow: hidden;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goBackBtn {
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  color: $white;
+  font-family: MontReg, MontR, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  @media screen and (max-width: 440px) {
+    & {
+      top: 5%;
+    }
+  }
+}
+
+.accodrionMain{
+  width: 100%;
+}
+
+.flipText {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  opacity: 0;
+  white-space: nowrap;
+
+  &:hover {
+    &:after {
+      opacity: 1;
+      top: 10px;
+      transform: translateY(0) rotateX(0);
+    }
+
+    &:before {
+      opacity: 0;
+      transform: translateY(-50%) rotateX(-90deg);
+    }
+  }
+
+  &:after {
+    top: 10px;
+    left: 50%;
+    opacity: 0;
+    width: 100%;
+    display: block;
+    transition: $speed;
+    position: absolute;
+    content: attr(data-back);
+    transform: translateY(50%) rotateX(-90deg);
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: block;
+    padding: 0 15px;
+    line-height: 40px;
+    transition: $speed;
+    position: relative;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+.flipTextAni {
+  transition: all 0.6s;
+  opacity: 1;
+}
+
+@keyframes appearFromTop {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes disappearToTop {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opacity: 0;
+    top: -100%;
+  }
+}
+
+@keyframes slideFromDown {
+  from {
+    bottom: -40px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes slideFromUp {
+  from {
+    top: -40px;
+  }
+  to {
+    top: 0;
+  }
+}

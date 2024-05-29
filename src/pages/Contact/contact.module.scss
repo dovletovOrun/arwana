@@ -1,0 +1,101 @@
+@import "../../styles/colors.scss";
+@import "../../styles/commonStyles.scss";
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactContainer {
+  background-color: $backgroundColor;
+}
+
+.textWrapper {
+  background-color: $contactBg;
+  height: 50vh;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  @media screen and (max-width: 768px) {
+    & {
+      height: 40vh;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    & {
+      height: 25vh;
+      align-content: end;
+    }
+  }
+}
+
+.contactMainText {
+  @include mainText;
+  margin: auto;
+  @media screen and (max-width: 1024px) {
+    & {
+      text-align: center;
+      white-space: wrap;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    & {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.contactSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 100px 0;
+
+  @media screen and (max-width: 600px) {
+    & {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+.logoCol {
+  @include column;
+  align-items: center;
+}
+
+.logoCol img {
+  max-width: 100%;
+}
+
+.contactCol {
+  @include column;
+}
+
+.contactCol h3 {
+  color: $white;
+  font-family: MontReg, MontR, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44.8px;
+  letter-spacing: 1px;
+
+  @media screen and (max-width: 768px) {
+    & {
+      font-size: 24px;
+    }
+  }
+}
+
+.contactCol p {
+  color: $white;
+  font-family: MontThin, MontT, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32.4px;
+}

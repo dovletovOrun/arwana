@@ -1,0 +1,35 @@
+@import "../../styles/colors.scss";
+
+.custom-drawer .ant-drawer-title {
+  color: $white;
+
+  font-family: MontReg, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.custom-drawer .ant-drawer-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.save-btn {
+  background-color: $green;
+  border: none;
+  color: $white;
+  font-family: MontBold, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  min-height: 40px;
+  width: 100%;
+}
+
+.save-btn:hover {
+  color: $white !important;
+}

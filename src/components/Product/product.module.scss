@@ -1,0 +1,345 @@
+@import "../../styles/colors.scss";
+@import "../../styles/commonStyles.scss";
+
+.productContainer {
+  background: $backgroundColor;
+}
+
+.mainText {
+  @include mainText;
+  display: flex;
+  gap: 3px;
+  @media screen and (max-width: 1400px) {
+    & {
+      font-size: 60px;
+    }
+  }
+}
+
+.resTitle {
+  @include h2;
+  text-align: center;
+}
+
+.titleContainer {
+  padding-top: 200px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    & {
+      padding-top: 150px;
+    }
+  }
+}
+
+.GoBackBtn{
+  position: absolute;
+  top: 8%;
+  left: 3%;
+  button{
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+
+  }
+}
+
+.productImage {
+  width: 60%;
+  margin: 80px auto;
+
+  @media screen and (max-width: 768px) {
+    & {
+      width: 85%;
+    }
+  }
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.productImage img {
+  animation: 0.8s linear scaleUp;
+  transform: scale(1);
+}
+
+.productDef {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.productDef p {
+  width: 50%;
+  text-align: center;
+  color: $white;
+  text-align: center;
+  font-family: MontReg, MontR, sans-serif;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32.2px;
+  margin: 50px 0px 30px;
+  @media screen and (max-width: 1024px) {
+    & {
+      width: 85%;
+      font-size: 18px;
+      font-family: MontBold, MontB, sans-serif;
+      margin: 40px 0px 20px;
+    }
+  }
+}
+
+.price {
+  opacity: 1;
+  outline: 0;
+  background-color: #000;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: MontReg, MontR, sans-serif;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 30px 0px;
+  @media screen and (max-width: 768px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}
+
+.technicalDrawer {
+  display: flex;
+  width: 65%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+  font-family: MontReg, MontR, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.2px;
+  padding: 20px;
+  @media screen and (max-width: 1024px) {
+    & {
+      width: 90%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    & {
+      font-size: 12px;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    & {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
+
+.technicalInfo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 40%;
+}
+
+.materials {
+  display: flex;
+  width: 55%;
+  gap: 15px;
+  justify-content: center;
+}
+
+.tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.tag img {
+  max-height: 100px;
+}
+
+.propsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 100px 0px 0px 0px;
+  @media screen and (max-width: 1024px) {
+    & {
+      margin: 100px 0px 0px 0px;
+    }
+  }
+}
+
+.propRow {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  @media screen and (max-width: 1440px) {
+    & {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}
+
+.propRow h2 {
+  @include h2;
+}
+
+.mainItem {
+  display: inline-block;
+  overflow: hidden;
+  width: 60%;
+  @media screen and (max-width: 1024px) {
+    & {
+      width: 100%;
+    }
+  }
+}
+
+.avatar {
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+  overflow: hidden;
+}
+
+.avatarRight {
+  transform: translateX(100%);
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+  overflow: hidden;
+}
+
+.avatar img,
+.avatarRight img {
+  width: 100%;
+  transform: translateX(-100%);
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+  height: 450px;
+  object-fit: cover;
+  max-width: 400px;
+  @media screen and (max-width: 1024px) {
+    & {
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    & {
+      height: 250px;
+    }
+  }
+}
+
+.avatarAni,
+.avatarAni img {
+  transform: translateX(0) scale(1);
+  transition: transform 1.7s;
+  transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.relatedProducts {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.relatedProducts h2 {
+  @include h2;
+}
+
+.prList {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.prList div {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.prList img {
+  max-width: 90%;
+  object-fit: cover;
+  transition: filter 0.3s;
+  opacity: 1;
+}
+
+.gridImg {
+  animation: 0.8s linear scaleUp;
+  transform: scale(1);
+}
+
+.overlayText {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+  transition: ease-in 0.3s;
+}
+
+.overlayText h1 {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  font-family: MontReg, MontR, sans-serif;
+  font-weight: 300;
+  color: $white;
+}
+
+.gridItem:hover .overlayText {
+  opacity: 1;
+}
+
+.gridItem:hover img {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+.fasades{
+  h1{
+    @include mainText;
+    text-align: center;
+    margin: 20px 0px;
+  }
+  margin-top: 100px;
+}

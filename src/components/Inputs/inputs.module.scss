@@ -1,0 +1,85 @@
+@import "../../styles/colors.scss";
+@import "../../styles/commonStyles.scss";
+
+@mixin input {
+  border: none;
+  border-bottom: 1px solid $cardBorderColor;
+  outline: none;
+  font-size: 18px;
+  color: #888;
+  font-family: MontReg, MontR, sans-serif;
+  padding: 14px 0 5px 0;
+  background-color: transparent;
+  width: 100%;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 0 auto;
+  padding: 100px 0 50px 0;
+
+  & div {
+    width: 48%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    & {
+      flex-direction: column;
+      width: 85%;
+
+      div {
+        width: 100%;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.inputCol {
+  margin-bottom: 40px;
+}
+
+.inputCol label {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.inputCol input {
+  @include input;
+}
+
+.inputCol textarea {
+  resize: none;
+  overflow-y: hidden;
+  @include input;
+}
+
+.placeholder {
+  color: #888;
+  font-family: MontReg, MontR, sans-serif;
+  font-size: 18px;
+  position: absolute;
+  top: 0.75em;
+  left: 0;
+  transition: all ease-in-out 0.3s;
+}
+
+.placeholderActive {
+  transform: scale(0.8571) translateY(-1.7rem);
+  left: -5px;
+  color: #fff;
+}
+
+.placeholderActiveArea {
+  transform: scale(0.8571) translateY(-1.9rem);
+  left: -15px;
+  color: #fff;
+}

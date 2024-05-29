@@ -1,0 +1,8 @@
+@import "../../styles/colors.scss";
+@import "../../styles/commonStyles.scss";
+
+.adminUpload {
+  @include adminPageContainer;
+  justify-content: flex-start;
+  padding-top: 120px;
+}

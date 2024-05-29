@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+
+.btn {
+  background-color: $green;
+  color: $white;
+  font-family: MontBold, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: $green !important;
+  opacity: 0.7;
+}

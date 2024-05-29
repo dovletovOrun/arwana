@@ -1,0 +1,46 @@
+@import "../../styles/colors.scss";
+@import "../../styles/commonStyles.scss";
+
+.drawerInactive {
+  width: 100%;
+
+  max-height: 0;
+  animation: 0.7s linear removeHeight;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.drawerActive {
+  width: 100%;
+
+  height: auto;
+  animation: 0.7s linear addHeight;
+  z-index: 1;
+  overflow: hidden;
+  max-height: 500px;
+
+  @media screen and (max-width: 1024px) {
+    & {
+      max-height: 700px;
+    }
+  }
+}
+
+@keyframes addHeight {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: 500px;
+  }
+}
+
+@keyframes removeHeight {
+  from {
+    max-height: 500px;
+  }
+  to {
+    max-height: 0;
+  }
+}

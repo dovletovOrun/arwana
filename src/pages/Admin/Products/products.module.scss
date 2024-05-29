@@ -1,0 +1,49 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/commonStyles.scss";
+
+.adminProducts {
+  @include adminPageContainer;
+}
+
+.productsHead {
+  @include panelHead;
+}
+
+.productsHeadTitle {
+  @include panelHeadTitle;
+}
+
+.prCard {
+  @include adminCard;
+}
+
+.prInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prPropName {
+  @include cardText;
+  color: $adminTextColor;
+}
+
+.prProp {
+  @include cardText;
+  color: $green;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.noimage {
+  height: 100px;
+  width: 100px;
+  background-color: $cardBorderColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}

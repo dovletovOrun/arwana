@@ -1,0 +1,47 @@
+@import "../../styles/colors.scss";
+.panel {
+  height: 70%;
+  background-color: $sidebar;
+  width: 70%;
+  padding: 15px 10px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.panel::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.panel::-webkit-scrollbar-thumb {
+  background-color: #555555;
+  border-radius: 100px;
+}
+
+.panelHead {
+  width: 100%;
+  color: $green;
+  font-family: MontReg, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  border-bottom: 1px solid $white;
+  padding: 15px 8px;
+  position: relative;
+}
+
+.panelHead::before {
+  content: "";
+  background-color: $green;
+  width: 15%;
+  height: 3px;
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  z-index: 2;
+}

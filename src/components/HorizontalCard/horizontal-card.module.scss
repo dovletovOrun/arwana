@@ -1,0 +1,93 @@
+@import "../../styles/colors.scss";
+@import "../../styles/commonStyles.scss";
+
+.card {
+  border-right: 1px solid $cardBorderColor;
+  width: 85%;
+  height: 70vh;
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (max-width: 1024px) {
+    & {
+      border-right: none;
+      height: fit-content;
+      width: 80%;
+    }
+  }
+}
+
+.cardOnlyText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid $cardBorderColor;
+  width: 100%;
+  height: 70vh;
+  gap: 20px;
+  min-width: 250px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.cardImageContainer {
+  padding: 80px 0;
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (max-width: 660px) {
+    & {
+      padding: 40px 0;
+    }
+  }
+}
+
+.cardImageContainer img {
+  max-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  width: 100%;
+  max-height: 300px;
+}
+
+.mainTextContainer {
+  position: relative;
+  width: fit-content;
+}
+.mainTextContainer:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid $white;
+  width: 0;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 1s ease;
+  transition: 0.7s ease;
+}
+
+.mainTextContainer:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.cardImageContainer:hover ~ .mainTextContainer:after {
+  width: 100%;
+  left: 0;
+}
+
+.cardTitle {
+  color: $white;
+  font-family: MontThin, MontT, sans-serif;
+  font-size: 30.5px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 42.7px;
+  position: relative;
+}
+
+.horSectionTitle {
+  @include section-text;
+  text-align: center;
+}
