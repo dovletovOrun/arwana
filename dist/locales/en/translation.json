@@ -1,0 +1,61 @@
+{
+	"menu": {
+		"menu": "Menu",
+		"close": "close",
+		"category": "Category",
+		"brands": "Brands",
+		"showroom": "Showroom",
+		"newproducts": "New products",
+		"aboutus": "About us",
+		"requestinfo": "Request information",
+		"goback": "Go back"
+	},
+	"mainpage": {
+		"newbrand": "New Brand",
+		"openbtn": "Open",
+		"allcats": "All Categories",
+		"explorebtn": "Explore",
+		"aboutstore": "About our company Arwana Furniture ",
+		"storepara": "Welcome to the wonderful world of style and luxury - the elite furniture store Arwana Mebel! Here, among exquisite forms and noble materials, your home will be transformed into a real temple of sophistication and comfort.",
+		"autumnbrand": "Autumn Brand"
+	},
+	"aboutus": {
+		"welcome": "Welcome to",
+		"whyarwana": "Why Arwana?",
+		"aboutpara": "Arwana Furniture is not just furniture, it is a work of art that will highlight your unique style and personality. Our company specializes in providing the most outstanding examples of Italian and German design, bringing sophistication, luxury and comfort to your home.",
+		"ouradvs": "Our advantages",
+		"advspara": "'Arwana Furniture' is not only furniture, but also an experience that we offer you every time you step into our world. Our designers are ready to help you realize your dreams of an ideal home, creating an atmosphere where every thing is in its place, every line and shape emphasizes harmony and style.",
+		"consultation": "Consultation",
+		"designservice": "Design services",
+		"individual": "Individual Approach"
+	},
+	"footer": {
+		"followus": "Follow store news on our website",
+		"address": "Str. 1958 (Andalyp),"
+	},
+	"brands": {
+		"allbrands": "Brands",
+		"downloadcatalog": "Download catalog",
+		"allproducts": "All products"
+	},
+	"contact": {
+		"firstname": "Firstname*",
+		"lastname": "Lastname*",
+		"phone": "Phone number*",
+		"message": "Your message",
+		"sendmessage": "Send request",
+		"headquarters": "Headquarters"
+	},
+	"product": {
+		"technicalinfo": "Technical data",
+		"addinfo": "Add info.",
+		"availability": "Availability",
+		"available": "Ready to ship",
+		"universal": "Universal luxury",
+		"comfort": "Functional comfort",
+		"quality": "High quality",
+		"facades": "Facades"
+		
+
+	}
+}

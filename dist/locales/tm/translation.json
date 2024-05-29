@@ -1,0 +1,59 @@
+{
+	"menu": {
+		"menu": "Menýu",
+		"close": "Ýapmak",
+		"category": "Kategoriýalar",
+		"brands": "Brendlar",
+		"showroom": "Sergi otagy",
+		"newproducts": "Täze gelenler",
+		"aboutus": "Biz barada",
+		"requestinfo": "Goşmaça maglumat",
+		"goback": "Yza"
+	},
+	"mainpage": {
+		"newbrand": "Täze brend",
+		"openbtn": "girmek",
+		"allcats": "Hemme Kategoriýalar",
+		"explorebtn": "Dowam et",
+		"aboutstore": "Biziň Arwana Mebel kärhanamyz  barada",
+		"storepara": "Ajaýyp stil we kaşaň dünýä - hoş geldiňiz mebel dükany Arwana Mebel! Bu ýerde ajaýyp görnüşleriň we asylly materiallaryň arasynda jaýyňyz hakyky ussatlyk we rahatlyk ybadathanasyna öwrüler.",
+		"autumnbrand": "Güýz brendi"
+	},
+	"aboutus": {
+		"welcome": "Hoş geldiňiz!",
+		"whyarwana": "Näme üçin Arwana?",
+		"aboutpara": "“Arwana Mebel” diňe bir mebel däl, özboluşly stiliňizi we şahsyýetiňizi görkezjek sungat eseri. Biziň kompaniýamyz, italýan we nemes dizaýnynyň iň ajaýyp mysallaryny bermekde, öýüňize çylşyrymlylyk, kaşaňlyk we rahatlyk getirmekde ýöriteleşendir.",
+		"ouradvs": "Biziň artykmaçlyklarymyz",
+		"advspara": "“Arwana Mebel” diňe bir mebel däl, eýsem her gezek dünýämize gireniňizde size hödürleýän tejribämizdir. Dizaýnerlerimiz, her bir zadyň öz ýerinde, her setir we şekil sazlaşygy we stili nygtaýan atmosferany döredip, ideal jaý baradaky arzuwlaryňyzy amala aşyrmaga kömek etmäge taýýardyr.",
+		"consultation": "Konsultasiýa",
+		"designservice": "Dizaýn hyzmatlary",
+		"individual": "Şahsy çemeleşmeler"
+	},
+	"footer": {
+		"followus": "Dükan habarlaryny web sahypamyzda yzarlaň",
+		"address": "Köç. 1958 (Andalyp),"
+	},
+	"brands": {
+		"allbrands": "Brendler",
+		"downloadcatalog": "Katalog ýükläp almak",
+		"allproducts": "Ähli önümler"
+	},
+	"contact": {
+		"firstname": "Adyňyz*",
+		"lastname": "Familiýaňyz*",
+		"phone": "Telefon nomeriňiz*",
+		"message": "Siziň sargydyňyz*",
+		"sendmessage": "Ibermek",
+		"headquarters": "Baş ofis"
+	},
+	"product": {
+		"technicalinfo": "Tehniki maglumatlar",
+		"addinfo": "Goş. mag.",
+		"availability": "Elýeterligi",
+		"available": "Ibermäge taýyn",
+		"universal": "Ähliumumy kaşaňlyk",
+		"comfort": "Funksional rahatlyk",
+		"quality": "Ýokary hilli",
+		"facades": "Fasatlar"
+	}
+}
