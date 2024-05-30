@@ -20,21 +20,21 @@ import styles from "./footer.module.scss";
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(true);
   const { setType } = useContext(CustomCursorContext);
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (
-      location.pathname.startsWith("/admin") ||
-      location.pathname === "/loginadmin"
-    ) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (
+  //     location.pathname.startsWith("/admin") ||
+  //     location.pathname === "/loginadmin"
+  //   ) {
+  //     setIsVisible(false);
+  //   } else {
+  //     setIsVisible(true);
+  //   }
+  // }, [location]);
 
   return (
     <footer
