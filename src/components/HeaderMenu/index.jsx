@@ -170,8 +170,8 @@ export default function HeaderMenu({ isActive, setIsMenuActive }) {
                     <li className={styles.subMenu} style={{ width: "320px" }}>
                       <ul className={styles.subMenuWrapper}>
                         {link.subLinks.map((subLink) => (
-                          <Collapse key={subLink.id}>
-                            <Panel header={subLink.name}>
+                          <Collapse  key={subLink.id}>
+                            <Panel className={styles.panelIcons} header={<span style={{ color: "#fff", fontSize: "23px" }}>{subLink.name}</span>}>
                               <li
                               onMouseEnter={() => setType("clickable")}
                               onMouseLeave={() => setType("default")}

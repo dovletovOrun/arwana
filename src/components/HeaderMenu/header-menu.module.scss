@@ -97,6 +97,17 @@ $speed: 0.3s;
   }
 }
 
+.panelIcons span:first-child{
+  margin-top: 10px !important;
+color: aliceblue !important;
+font-size: 20px !important;
+}
+.panelIcons > div{
+  background-color: transparent !important;
+}
+
+
+
 .mainLinksUp {
   @include h5;
   animation: slideFromUp 1.6s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
@@ -165,6 +176,7 @@ $speed: 0.3s;
 .accodrionMain{
   width: 100%;
 }
+
 
 .flipText {
   position: relative;

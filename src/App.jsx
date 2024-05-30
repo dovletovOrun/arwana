@@ -8,7 +8,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 import CustomCursor from "./components/Cursor";
 import CustomCursorManager from "./components/Cursor/context/manager";
-import ProtectedRoute from "./ProtectedRoutes";
+// import ProtectedRoute from "./ProtectedRoutes";
 import { BounceLoader } from "react-spinners";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -17,8 +17,8 @@ const Brand = lazy(() => import("./components/Brand"));
 const Category = lazy(() => import("./components/Category"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Product = lazy(() => import("./components/Product"));
-const LoginAdmin = lazy(() => import("./pages/Admin/Login"));
-const AdminMain = lazy(() => import("./pages/Admin/Main"));
+// const LoginAdmin = lazy(() => import("./pages/Admin/Login"));
+// const AdminMain = lazy(() => import("./pages/Admin/Main"));
 const AllCats = lazy(() => import("./pages/AllCategories"));
 const AllBrands = lazy(() => import("./pages/AllBrands"));
 
@@ -79,7 +79,7 @@ export default function App() {
           <Route element={<Brand />} path="/brand/:id" />
           <Route element={<Category />} path="/category/:id" />
           <Route element={<Product />} path="/product/:id" />
-          <Route element={<LoginAdmin />} path="/loginadmin" />
+          {/* <Route element={<LoginAdmin />} path="/loginadmin" />
           <Route element={<Navigate to="/" replace={true} />} path="*" />
           <Route
             element={
@@ -88,7 +88,7 @@ export default function App() {
               </ProtectedRoute>
             }
             path="/admin/*"
-          />
+          /> */}
         </Routes>
       </CustomCursorManager>
     </Suspense>

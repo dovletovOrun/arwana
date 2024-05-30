@@ -1,4 +1,4 @@
-@import 'react-image-gallery/styles/css/image-gallery.css';
+@import "react-image-gallery/styles/css/image-gallery.css";
 
 @font-face {
   font-family: "MontBold";
@@ -96,28 +96,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-:where(.css-dev-only-do-not-override-zl9ks2).ant-collapse .ant-collapse-content{
-  background-color: transparent;
-}
-:where(.css-dev-only-do-not-override-zl9ks2).ant-collapse{
-  color: #fff;
-  font-size: 23px;
-}
-
-:where(.css-dev-only-do-not-override-zl9ks2).ant-collapse>.ant-collapse-item >.ant-collapse-header{
-  color: #fff;
-  font-weight: 300;
-  font-size: 23px;
-}
-:where(.css-dev-only-do-not-override-zl9ks2).ant-collapse>.ant-collapse-item >.ant-collapse-header .ant-collapse-arrow{
-  font-size: 23px;
-}
-
-:where(.css-dev-only-do-not-override-zl9ks2).ant-collapse>.ant-collapse-item >.ant-collapse-header .ant-collapse-expand-icon {
-  display: block;
-  
-}
 .image-gallery-content .image-gallery-slide .image-gallery-image {
   max-height: calc(80vh - 140px);
 }
-
