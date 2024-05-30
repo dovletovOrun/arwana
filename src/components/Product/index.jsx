@@ -150,7 +150,13 @@ export default function Product() {
         </div>
         {formattedFasades.length > 0 && (
           <div className={styles.fasades}>
-            <h1 className={styles.mainTextFasades}>{t("product.facades")}</h1>
+            <h1 className={styles.mainTextFasades}>
+            {lang === "tm"
+              ? productDetail?.facades_title_tk
+              : lang === "ru"
+              ? productDetail?.facades_title_ru
+              : productDetail?.facades_title_en}
+            </h1>
             <ReactImageGallery
               items={formattedFasades}
               thumbnailPosition="bottom"
