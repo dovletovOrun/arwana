@@ -52,16 +52,16 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    if (
-      location.pathname.startsWith("/admin") ||
-      location.pathname === "/loginadmin"
-    ) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (
+  //     location.pathname.startsWith("/admin") ||
+  //     location.pathname === "/loginadmin"
+  //   ) {
+  //     setIsVisible(false);
+  //   } else {
+  //     setIsVisible(true);
+  //   }
+  // }, [location]);
 
   const renderDropdownMenu = (smallgroupcodes) => (
     <Menu>

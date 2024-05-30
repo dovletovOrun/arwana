@@ -167,14 +167,23 @@ export default function HeaderMenu({ isActive, setIsMenuActive }) {
                     </li>
                   )}
                   {link.subLinks && isProducts && (
-                    <li className={styles.subMenu} style={{ width: "320px" }}>
+                    <li className={styles.subMenu} style={{ width: "fit-content" }}>
                       <ul className={styles.subMenuWrapper}>
                         {link.subLinks.map((subLink) => (
-                          <Collapse  key={subLink.id}>
-                            <Panel className={styles.panelIcons} header={<span style={{ color: "#fff", fontSize: "23px" }}>{subLink.name}</span>}>
+                          <Collapse key={subLink.id}>
+                            <Panel
+                              className={styles.panelIcons}
+                              header={
+                                <span
+                                  style={{ color: "#fff", fontSize: "23px" }}
+                                >
+                                  {subLink.name}
+                                </span>
+                              }
+                            >
                               <li
-                              onMouseEnter={() => setType("clickable")}
-                              onMouseLeave={() => setType("default")}
+                                onMouseEnter={() => setType("clickable")}
+                                onMouseLeave={() => setType("default")}
                               >
                                 {subLink.cat.length > 0
                                   ? subLink.cat?.map((items) => (
@@ -182,10 +191,9 @@ export default function HeaderMenu({ isActive, setIsMenuActive }) {
                                         key={items.id}
                                         className={styles.mainTextContainer}
                                         onClick={() => {
-                                          setIsMenuActive(false)
-                                          navigate(`/category/${items.id}`)
+                                          setIsMenuActive(false);
+                                          navigate(`/category/${items.id}`);
                                         }}
-                                          
                                       >
                                         <div className={styles.overflow}>
                                           <h5
@@ -195,7 +203,11 @@ export default function HeaderMenu({ isActive, setIsMenuActive }) {
                                                 : styles.subLinksUp
                                             }
                                           >
-                                            {items.name_en}
+                                            {lang === "tm"
+                                              ? items.name_tk
+                                              : lang === "ru"
+                                              ? items.name_ru
+                                              : items.name_en}
                                           </h5>
                                         </div>
                                       </div>
