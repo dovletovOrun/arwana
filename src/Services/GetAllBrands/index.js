@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const getAllBrandsApi = createApi({
     reducerPath: "getAllBrandsApi",
-    baseQuery: fetchBaseQuery({baseUrl: `http://216.250.11.9:8090`}),
+    baseQuery: fetchBaseQuery({baseUrl: import.meta.env.VITE_BASE_URL}),
     tagTypes: ["Brand"],
     endpoints: (build) => ({
         getHomePageData: build.query({
