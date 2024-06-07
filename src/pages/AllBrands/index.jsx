@@ -8,7 +8,7 @@ import ProductGrid from '../../components/ProductGrid';
 
 import styles from './allbrands.module.scss';
 
-
+import main1 from "../../assets/brand/brand1.png"
 import { getAllBrandsApi } from '../../Services/GetAllBrands';
 
 
@@ -30,7 +30,9 @@ export default function AllBrands() {
 			<div className={styles.categoryContainer}>
 				<div
 					style={{
-						background: `linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%), url(${brandsPageImage?.image})`,
+						backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%), url(${brandsPageImage?.image?.length > 0
+							? brandsPageImage.image
+							: main1})`,
 						backgroundSize: 'cover',
 						backgroundPosition: 'center',
 						backgroundRepeat: 'no-repeat',
