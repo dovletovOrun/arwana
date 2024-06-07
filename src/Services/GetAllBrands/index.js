@@ -18,6 +18,12 @@ export const getAllBrandsApi = createApi({
             }),
           
         }),
+        getAllBrandsPageImageData: build.query({
+            query: () => ({
+                url: "/brand/brand-page-image/",
+            }),
+          
+        }),
         getAllProductDetailsData: build.query({
             query: (id) => ({
                 url: `/product/product-detail/${id}/`,

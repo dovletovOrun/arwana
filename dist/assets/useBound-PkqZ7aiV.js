@@ -1,0 +1,1 @@
+import{r as t}from"./index-QU9iPCjO.js";function l(n,o){const[r,s]=t.useState(!1);return t.useEffect(()=>{if(!n.current)return;const i=n.current.getBoundingClientRect().top,e=()=>{const c=window.scrollY+window.innerHeight;i+o<c&&s(!0)};return window.addEventListener("scroll",e),()=>{window.removeEventListener("scroll",e)}},[]),r}export{l as u};

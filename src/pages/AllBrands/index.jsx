@@ -1,11 +1,6 @@
-import { useEffect } from 'react';
-
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
-import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-
-// import { getBrands } from '../../store/admin/brands';
 
 import PageWrapper from '../../components/PageWrapper';
 import ProductGrid from '../../components/ProductGrid';
@@ -13,7 +8,7 @@ import ProductGrid from '../../components/ProductGrid';
 
 import styles from './allbrands.module.scss';
 
-import brand1 from '../../assets/brand/brand1.png';
+
 import { getAllBrandsApi } from '../../Services/GetAllBrands';
 
 
@@ -23,6 +18,7 @@ const animationDelay = 150;
 export default function AllBrands() {
 
 	const {data: brandData} = getAllBrandsApi.useGetAllBrandsDataQuery()
+	const {data: brandsPageImage} = getAllBrandsApi.useGetAllBrandsPageImageDataQuery()
 	console.log(brandData);
 	const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
 
@@ -34,7 +30,7 @@ export default function AllBrands() {
 			<div className={styles.categoryContainer}>
 				<div
 					style={{
-						background: `linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%), url(${brand1})`,
+						background: `linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%), url(${brandsPageImage?.image})`,
 						backgroundSize: 'cover',
 						backgroundPosition: 'center',
 						backgroundRepeat: 'no-repeat',

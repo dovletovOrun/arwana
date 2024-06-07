@@ -155,6 +155,7 @@ export default function Home() {
             }
           />
         </div>
+        <div className={styles.responsiveText}>{t("mainpage.allcats")}</div>
         <div className={styles.horizontalSection} ref={horizontalSection}>
           <Swiper
             direction={"horizontal"}
@@ -165,6 +166,10 @@ export default function Home() {
             modules={[Navigation]}
             loop={true}
             speed={900}
+            // navigation={{
+            //   nextEl: `.${styles.customNext}`,
+            //   prevEl: `.${styles.customPrev}`,
+            // }}
           >
             {!isTablet && (
               <SwiperSlide
@@ -175,7 +180,7 @@ export default function Home() {
                 <HorizontalCard image={card1} isTitle={true} />
               </SwiperSlide>
             )}
-            {!isTablet &&
+            {
               data?.subcategories
               &&
               data?.subcategories.map((cat) => {
@@ -187,7 +192,7 @@ export default function Home() {
               })}
           </Swiper>
         </div> 
-        {isTablet && (
+        {/* {isTablet && (
           <div className={styles.responsiveCards}>
             {data?.subcategories
               &&
@@ -195,7 +200,7 @@ export default function Home() {
                 return <HorizontalCard key={cat.id} cat={cat} />;
               })}
           </div>
-        )}
+        )} */}
 
         <ShowRoom />
       </main>

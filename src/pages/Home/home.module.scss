@@ -144,12 +144,23 @@
   @include p;
   width: 50%;
 }
+.responsiveText{
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+    text-align: center;
+    @include h2;
+  }
+}
 
 .horizontalSection {
   display: flex;
-  gap: 80px;
+  gap: 50px;
   flex-wrap: nowrap;
   padding: 30px 50px 20px 50px;
+  @media screen and (max-width: 768px) {
+    padding: 30px 10px;
+  }
 }
 
 .responsiveCards {
@@ -159,3 +170,23 @@
   gap: 20px;
   padding-bottom: 100px;
 }
+// @media screen and (max-width: 768px) {
+//   .customNext,
+//   .customPrev {
+//     width: 50px; /* Adjust width as needed */
+//     height: 50px; /* Adjust height as needed */
+  
+//     &::after {
+//       font-size: 24px; /* Adjust icon size as needed */
+//     }
+//   }
+  
+//   .customNext {
+//     right: 10px; /* Adjust position as needed */
+//   }
+  
+//   .customPrev {
+//     left: 10px; /* Adjust position as needed */
+//   }
+// }
+
