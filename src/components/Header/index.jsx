@@ -143,6 +143,9 @@ export default function Header() {
             </Dropdown>
           </li>
         ))}
+          <li onClick={() => navigate("/home")}>
+            <span>{t("menu.aboutus")}</span>
+          </li>
       </ul>
       <nav className={styles.nav}>
         <div

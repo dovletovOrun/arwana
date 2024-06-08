@@ -21,7 +21,7 @@
 
 .avatarAni,
 .avatarAni img {
-  transform: translateX(0) scale(1.1);
+  transform: translateX(0);
   transition: transform 1.2s;
   transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
 }
