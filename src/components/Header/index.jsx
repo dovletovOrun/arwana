@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 
 import HeaderMenu from "../HeaderMenu";
 import { Dropdown, Menu } from "antd";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -30,7 +30,7 @@ export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const { data } = getAllCategoryApi.useGetAllCategoryDataQuery();
 
-  const location = useLocation();
+
   const dispatch = useDispatch();
   const { i18n, t } = useTranslation();
   const lang = useSelector((state) => state.lang.lang);
@@ -52,16 +52,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // useEffect(() => {
-  //   if (
-  //     location.pathname.startsWith("/admin") ||
-  //     location.pathname === "/loginadmin"
-  //   ) {
-  //     setIsVisible(false);
-  //   } else {
-  //     setIsVisible(true);
-  //   }
-  // }, [location]);
 
   const renderDropdownMenu = (smallgroupcodes) => (
     <Menu>
